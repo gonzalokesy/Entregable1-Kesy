@@ -1,0 +1,177 @@
+[
+    {
+        "id": 1,
+        "plato": "Chorizo y morcilla de campo",
+        "descripcion": "Dúo clásico a la leña acompañado de salsa criolla y chimichurri casero.",
+        "precio": 4500,
+        "categoria": "entrada"
+    },
+    {
+        "id": 2,
+        "plato": "Provoleta a la parrilla",
+        "descripcion": "Queso provolone fundido con orégano, ají molido y un toque de aceite de oliva.",
+        "precio": 5200,
+        "categoria": "entrada"
+    },
+    {
+        "id": 3,
+        "plato": "Empanada de carne cortada a cuchillo",
+        "descripcion": "Tradicional empanada frita, jugosa y con el auténtico sabor del campo.",
+        "precio": 1800,
+        "categoria": "entrada"
+    },
+    {
+        "id": 4,
+        "plato": "Chinchulines crocantes",
+        "descripcion": "Chinchulines de novillo seleccionados, asados a fuego lento con limón.",
+        "precio": 6500,
+        "categoria": "entrada"
+    },
+    {
+        "id": 5,
+        "plato": "Ojo de bife (400g)",
+        "descripcion": "Corte premium a la parrilla en su punto justo, con sal de mar y romero.",
+        "precio": 18500,
+        "categoria": "principal"
+    },
+    {
+        "id": 6,
+        "plato": "Tira de asado especial",
+        "descripcion": "Costillar cortado transversalmente, cocción lenta para máxima ternura.",
+        "precio": 16200,
+        "categoria": "principal"
+    },
+    {
+        "id": 7,
+        "plato": "Vacío tierno",
+        "descripcion": "Corte jugoso con capa de grasa crocante, asado lentamente a la estaca.",
+        "precio": 17800,
+        "categoria": "principal"
+    },
+    {
+        "id": 8,
+        "plato": "Bife de chorizo (500g)",
+        "descripcion": "El corazón del asado argentino, corte alto con su clásica veta de grasa lateral.",
+        "precio": 19000,
+        "categoria": "principal"
+    },
+    {
+        "id": 9,
+        "plato": "Matambre a la pizza",
+        "descripcion": "Matambre de ternera tierno con salsa de tomate, muzzarella y aceitunas.",
+        "precio": 15500,
+        "categoria": "principal"
+    },
+    {
+        "id": 10,
+        "plato": "Parrillada completa (para 2)",
+        "descripcion": "Asado, vacío, chorizo, morcilla, chinchulín y riñón. Ideal para compartir.",
+        "precio": 32000,
+        "categoria": "principal"
+    },
+    {
+        "id": 11,
+        "plato": "Papas fritas rústicas",
+        "descripcion": "Papas cortadas a mano con doble cocción para mayor crocancia.",
+        "precio": 3800,
+        "categoria": "guarnicion"
+    },
+    {
+        "id": 12,
+        "plato": "Ensalada mixta",
+        "descripcion": "Lechuga fresca, tomate maduro y cebolla morada.",
+        "precio": 3200,
+        "categoria": "guarnicion"
+    },
+    {
+        "id": 13,
+        "plato": "Puré de papas cremoso",
+        "descripcion": "Elaborado con manteca y un toque de nuez moscada.",
+        "precio": 3500,
+        "categoria": "guarnicion"
+    },
+    {
+        "id": 14,
+        "plato": "Vegetales asados",
+        "descripcion": "Mix de estación: morrón, calabaza, berenjena y cebolla al rescoldo.",
+        "precio": 4200,
+        "categoria": "guarnicion"
+    },
+    {
+        "id": 15,
+        "plato": "Ensalada de rúcula y Parmesano",
+        "descripcion": "Hojas de rúcula fresca con láminas de queso parmesano y aceto balsámico.",
+        "precio": 4500,
+        "categoria": "guarnicion"
+    },
+    {
+        "id": 16,
+        "plato": "Vino Malbec Reserva",
+        "descripcion": "Copa de la casa, ideal para maridar con carnes rojas.",
+        "precio": 3500,
+        "categoria": "bebida"
+    },
+    {
+        "id": 17,
+        "plato": "Cerveza tirada (Pinta)",
+        "descripcion": "Variedad Golden o IPA artesanal bien helada.",
+        "precio": 2800,
+        "categoria": "bebida"
+    },
+    {
+        "id": 18,
+        "plato": "Limonada con menta y jengibre",
+        "descripcion": "Refrescante jarra individual con almíbar natural.",
+        "precio": 2200,
+        "categoria": "bebida"
+    },
+    {
+        "id": 19,
+        "plato": "Gaseosa (500ml)",
+        "descripcion": "Línea Coca-Cola, Sprite o Fanta.",
+        "precio": 1800,
+        "categoria": "bebida"
+    },
+    {
+        "id": 20,
+        "plato": "Agua mineral",
+        "descripcion": "Con o sin gas, embotellada en origen.",
+        "precio": 1500,
+        "categoria": "bebida"
+    },
+    {
+        "id": 21,
+        "plato": "Flan casero mixto",
+        "descripcion": "Acompañado de dulce de leche colonial y crema.",
+        "precio": 3200,
+        "categoria": "postre"
+    },
+    {
+        "id": 22,
+        "plato": "Panqueques con dulce de leche",
+        "descripcion": "Dos unidades caramelizadas a la plancha.",
+        "precio": 3000,
+        "categoria": "postre"
+    },
+    {
+        "id": 23,
+        "plato": "Vigilante clásico",
+        "descripcion": "Dúo de queso fresco y dulce de membrillo o batata.",
+        "precio": 2900,
+        "categoria": "postre"
+    },
+    {
+        "id": 24,
+        "plato": "Helado artesanal",
+        "descripcion": "Dos bochas a elección: Dulce de leche, Chocolate o Frutilla.",
+        "precio": 2500,
+        "categoria": "postre"
+    },
+    {
+        "id": 25,
+        "plato": "Tiramisú de la casa",
+        "descripcion": "Clásico postre italiano con mascarpone, café y cacao amargo.",
+        "precio": 4100,
+        "categoria": "postre"
+    }
+]

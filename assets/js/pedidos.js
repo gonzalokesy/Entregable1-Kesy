@@ -1,10 +1,10 @@
 const pedido = document.getElementById('listaPedido')
 
 function renderizarPedido(destino) {
-    const pedidosTotales = JSON.parse(localStorage.getItem('pedido'))
-    const totales = totalPedido(pedidosTotales)
+    const pedidosTotales = JSON.parse(localStorage.getItem('cliente'))
+    const totales = totalPedido(pedidosTotales.pedido)
     destino.innerHTML = ""
-    pedidosTotales.forEach(comanda => {
+    pedidosTotales.pedido.forEach(comanda => {
         const filaPedido = document.createElement('div')
         filaPedido.className = 'pedidosFila'
         filaPedido.innerHTML = `
@@ -47,10 +47,10 @@ function botonesPedidos() {
         boton.addEventListener('click', (e) => {
             const idBoton = e.currentTarget.id
             const idProducto = parseInt(idBoton.split("-")[2])
-            const pedidosTotales = JSON.parse(localStorage.getItem('pedido'))
-            const productoSeleccionado = pedidosTotales.find(p => idProducto === p.id)
+            const pedidosTotales = JSON.parse(localStorage.getItem('cliente'))
+            const productoSeleccionado = pedidosTotales.pedido.find(p => idProducto === p.id)
             productoSeleccionado.cantidad = productoSeleccionado.cantidad + 1
-            localStorage.setItem('pedido', JSON.stringify(pedidosTotales))
+            localStorage.setItem('cliente', JSON.stringify(pedidosTotales))
             renderizarPedido(pedido)
         })
     })
@@ -58,11 +58,11 @@ function botonesPedidos() {
         boton.addEventListener('click', (e) => {
             const idBoton = e.currentTarget.id
             const idProducto = parseInt(idBoton.split("-")[2])
-            const pedidosTotales = JSON.parse(localStorage.getItem('pedido'))
-            const productoSeleccionado = pedidosTotales.find(p => idProducto === p.id)
+            const pedidosTotales = JSON.parse(localStorage.getItem('cliente'))
+            const productoSeleccionado = pedidosTotales.pedido.find(p => idProducto === p.id)
             if (productoSeleccionado.cantidad > 1) {
                 productoSeleccionado.cantidad = productoSeleccionado.cantidad - 1
-                localStorage.setItem('pedido', JSON.stringify(pedidosTotales))
+                localStorage.setItem('cliente', JSON.stringify(pedidosTotales))
                 renderizarPedido(pedido)
             }
         })
@@ -71,9 +71,10 @@ function botonesPedidos() {
         boton.addEventListener('click', (e) => {
             const idBoton = e.currentTarget.id
             const idProducto = parseInt(idBoton.split("-")[2])
-            const pedidosTotales = JSON.parse(localStorage.getItem('pedido'))
-            const productoFiltrados = pedidosTotales.filter(p => p.id !== idProducto)
-            localStorage.setItem('pedido', JSON.stringify(productoFiltrados))
+            let pedidosTotales = JSON.parse(localStorage.getItem('cliente'))
+            const productoFiltrados = pedidosTotales.pedido.filter(p => p.id !== idProducto)
+            pedidosTotales.pedido = productoFiltrados
+            localStorage.setItem('cliente', JSON.stringify(pedidosTotales))
             renderizarPedido(pedido)
         })
     })
