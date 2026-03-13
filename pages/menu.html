@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso JS</title>
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Links -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Script -->
@@ -13,19 +15,22 @@
 
 <body>
     <header>
-        <button class="seleccionMenu" id="entrada" type="button">Entradas</button>
-        <button class="seleccionMenu" id="principal" type="button">Platos fuertes</button>
-        <button class="seleccionMenu" id="guarnicion" type="button">Guarniciones</button>
-        <button class="seleccionMenu" id="bebida" type="button">Bebidas</button>
-        <button class="seleccionMenu" id="postre" type="button">Postres</button>
-        <button class="seleccionMenu" id="verTodo" type="button">Ver todo</button>
-
-        <a href="../pages/pedido.html" class='enlace-pedido'>Ir al pedido</a>
+        <nav id="categorias-menu">
+            <button class="seleccionMenu" id="entrada" type="button">Entradas</button>
+            <button class="seleccionMenu" id="principal" type="button">Platos fuertes</button>
+            <button class="seleccionMenu" id="guarnicion" type="button">Guarniciones</button>
+            <button class="seleccionMenu" id="bebida" type="button">Bebidas</button>
+            <button class="seleccionMenu" id="postre" type="button">Postres</button>
+            <button class="seleccionMenu" id="verTodo" type="button">Ver todo</button>
+            <a href="./pedido.html">PEDIDO</a>
+        </nav>
     </header>
     <main>
         <div id="listaMenu">
         </div>
     </main>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

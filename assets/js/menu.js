@@ -1,5 +1,7 @@
 let menu = [];
 
+const carta = document.getElementById('listaMenu')
+
 async function obtenerPlatos() {
     try {
         const platosJson = await fetch('../platos.json');
@@ -8,13 +10,12 @@ async function obtenerPlatos() {
         const entradas = menu.filter(p => p.categoria === 'entrada');
         renderizarMenu(entradas, carta)
     } catch (e) {
-        alert('¡Un error ha ocurrido! La lista de platos no puede ser mostrada.')
+        alert('¡Error! La lista de platos no puede ser mostrada.')
     };
 };
 
 
-// Creación de menú
-const carta = document.getElementById('listaMenu')
+// Renderizaciones
 
 function renderizarMenu(array, destino) {
     destino.innerHTML = "";
@@ -41,6 +42,22 @@ function renderizarMenu(array, destino) {
     activarBotones()
 }
 
+function vistaFiltros() {
+    const botonesFiltros = document.querySelectorAll('.seleccionMenu');
+    botonesFiltros.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const idbtn = e.currentTarget.id;
+            if (idbtn !== 'verTodo') {
+                const platosFiltrados = menu.filter(p => p.categoria === idbtn);
+                renderizarMenu(platosFiltrados, carta);
+            } else {
+                renderizarMenu(menu, carta)
+            }
+        })
+    })
+}
+
+// Funcionalidad botones
 function activarBotones() {
     const botonesSumar = document.querySelectorAll('.boton-sumar')
     const botonesRestar = document.querySelectorAll('.boton-restar')
@@ -71,18 +88,36 @@ function activarBotones() {
         boton.addEventListener('click', (e) => {
             const idBoton = e.currentTarget.id
             const idProducto = parseInt(idBoton.split('-')[1])
+            const platoSeleccionado = menu.find(p => idProducto === p.id)
             const spanCantidad = document.getElementById(`contador-${idProducto}`)
             let cantidad = parseInt(spanCantidad.innerText)
             if (cantidad > 0) {
                 const buscarProducto = menu.find(plato => plato.id === idProducto)
                 agregarAlPedido(buscarProducto, cantidad)
                 spanCantidad.innerText = '0'
+                Toastify({
+                    text: `${platoSeleccionado.plato} fue agregado con éxito.`,
+                    duration: 3000,
+                    gravity: "bottom",
+                    position: "center",
+                    close: true,
+                    className: "toast-aprobado",
+                }).showToast();
             } else {
-                alert('La cantidad a agregar al pedido debe ser mayor que 0')
+                Toastify({
+                    text: `Seleccione una cantidad mayor que 0`,
+                    duration: 3000,
+                    gravity: "bottom",
+                    position: "center",
+                    close: true,
+                    className: "toast-rechazado",
+                }).showToast();
             }
         })
     })
 }
+
+// Otras funciones
 
 function agregarAlPedido(producto, cantidad) {
     let comanda = JSON.parse(localStorage.getItem('cliente'))
@@ -113,25 +148,6 @@ function agregarAlPedido(producto, cantidad) {
     }
     localStorage.setItem('cliente', JSON.stringify(comanda))
 }
-
-function vistaFiltros() {
-    const botonesFiltros = document.querySelectorAll('.seleccionMenu');
-    botonesFiltros.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const idbtn = e.currentTarget.id;
-            if (idbtn !== 'verTodo') {
-                const platosFiltrados = menu.filter(p => p.categoria === idbtn);
-                renderizarMenu(platosFiltrados, carta);
-            } else {
-                renderizarMenu(menu, carta)
-            }
-        })
-    })
-
-}
-
-
-
 
 
 vistaFiltros()

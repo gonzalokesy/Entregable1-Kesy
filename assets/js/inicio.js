@@ -13,19 +13,25 @@ function vistaInicio(id) {
     if (id === 'boton-mesa') {
         contenedor.innerHTML = `
         <form id="formulario-inicio" action="./pages/menu.html">
+        <div class='campo-formulario'>
         <label for="mesa-cliente">Ingrese su número de mesa</label>
         <input id="mesa-cliente" required>
-        <button type="submit">Ir al menú</button>
+        <d/iv>
+        <button type="submit" class="btn-principal">MENU</button>
         </form>
         `
     } else {
         contenedor.innerHTML = `
             <form id="formulario-inicio" action="./pages/menu.html">
+            <div class='campo-formulario'>
             <label for="nombre-cliente">Nombre</label>
             <input id="nombre-cliente"type="text" required>
+            </div>
+            <div class='campo-formulario'>
             <label for="telefono-cliente">Télefono</label>
             <input id="telefono-cliente"type="text" required>
-            <button type="submit">Ir al menú</button>
+            </div>
+            <button type="submit" class="btn-principal">MENU</button>
             </form>
             `
     };
